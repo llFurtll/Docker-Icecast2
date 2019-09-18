@@ -1,0 +1,19 @@
+version: '3'
+services:
+        icecast:
+                image: icecast2
+                environment:
+                        - IC_ADMIN=daniel
+                        - IC_PASSWORDADMIN=hackme
+                        - IC_CLIENTES=100
+                        - IC_SOURCES=42
+                        - IC_QUEUESIZE=524288
+                        - IC_CLITIMEOUT=30
+                        - IC_HEADERTIMEOUT=15
+                        - IC_SOURCETIMEOUT=10
+                        - IC_BURSTCONNECT=1
+                        - IC_BURSTSIZE=65535
+                        - IC_IP=localhost
+                        - IC_PORT=8000
+                ports:
+                        - "8000:8000"
