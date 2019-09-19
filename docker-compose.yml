@@ -1,7 +1,7 @@
 version: '3'
 services:
         icecast:
-                image: icecast2
+                image: danielm1999/icecast2
                 environment:
                         - IC_ADMIN=daniel
                         - IC_PASSWORDADMIN=hackme
