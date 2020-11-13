@@ -17,14 +17,3 @@ services:
                         - IC_PORT=8000
                 ports:
                         - "8000:8000"
-        https-portal:
-                image: steveltn/https-portal:1
-                ports:
-                        - '80:80'
-                        - '443':'443'
-                links:
-                        - danielm1999/icecast2
-                restart: aways
-                environment:
-                        DOMAINS: 'icecast.sistemaplug.com -> http://icecast.sistemaplug.com:80'
-                        STAGE: production
