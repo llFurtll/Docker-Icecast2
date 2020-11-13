@@ -7,6 +7,8 @@ RUN apt-get update && \
 
 EXPOSE 8000
 
+VOLUME ["/var/log/icecast2", "/config", "/etc/icecast2"]
+
 ADD ./fullchain.pem /fullchain.pem
 ADD ./privkey.pem /privkey.pem
 
@@ -26,8 +28,6 @@ ENV IC_ADMIN "admin"
 ENV IC_PASSWORDADMIN "hackme"
 ENV IC_IP "localhost"
 ENV IC_PORT "8000"
-
-VOLUME ["/var/log/icecast2", "/config", "/etc/icecast2"]
 
 ADD ./etc /etc
 ADD ./config.py /config.py
