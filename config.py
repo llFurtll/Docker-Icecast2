@@ -43,7 +43,3 @@ texto = texto.replace("ic-port", PORT)
 arquivo.write(texto)
 
 arquivo.close()
-
-print('Feito!')
-
-
