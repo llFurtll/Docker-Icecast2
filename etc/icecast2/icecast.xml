@@ -75,7 +75,7 @@
     </listen-socket>
     -->
     <listen-socket>
-        <port>443</port>
+        <port>5243</port>
         <ssl>1</ssl>
     </listen-socket>
 
