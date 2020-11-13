@@ -42,4 +42,6 @@ texto = texto.replace("ic-port", PORT)
 
 arquivo.write(texto)
 
+print(arquivo);
+
 arquivo.close()
