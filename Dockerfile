@@ -7,12 +7,12 @@ RUN apt-get update && \
 
 EXPOSE 8000
 
-VOLUME ["/fullchain1", "/privkey1"]
+VOLUME ["/cert1", "/privkey1"]
 
-ADD ./fullchain1.pem /fullchain1.pem
+ADD ./cert1.pem /cert1.pem
 ADD ./privkey1.pem /privkey1.pem
 
-CMD cat /fullchain1.pem /privkey1.pem > /etc/icecast2/bundle.pem && chmod 666 /etc/icecast2/bundle.pem
+CMD cat /cert1.pem /privkey1.pem > /etc/icecast2/bundle.pem && chmod 777 /etc/icecast2/bundle.pem
 
 
 ENV IC_CLIENTES "100"
