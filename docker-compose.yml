@@ -23,5 +23,8 @@ services:
                         - '80:80'
                         - '443':'443'
                 links:
-                        - icecast.sistemaplug.com
+                        - danielm1999/icecast2
                 restart: aways
+                environment:
+                        DOMAINS: 'icecast.sistemaplug.com -> http://icecast.sistemaplug.com:80'
+                        STAGE: production
