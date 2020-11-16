@@ -1,19 +1,11 @@
-FROM debian:latest
+FROM ubuntu:latest
 
 RUN apt-get update && \
     apt-get full-upgrade --yes && \
     apt-get install icecast2 python3 sudo --yes && \
-    chown -R icecast2 /etc/icecast2 
+    chown -R icecast2 /etc/icecast2
 
 EXPOSE 8000
-
-VOLUME ["/cert1", "/privkey1"]
-
-ADD ./cert1.pem /cert1.pem
-ADD ./privkey1.pem /privkey1.pem
-
-CMD cat /cert1.pem /privkey1.pem > /etc/icecast2/bundle.pem && chmod 777 /etc/icecast2/bundle.pem
-
 
 ENV IC_CLIENTES "100"
 ENV IC_SOURCES "42"

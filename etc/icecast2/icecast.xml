@@ -74,10 +74,12 @@
         <port>8080</port>
     </listen-socket>
     -->
+    <!--
     <listen-socket>
-        <port>5243</port>
+        <port>8443</port>
         <ssl>1</ssl>
     </listen-socket>
+    -->
 
 
     <!-- Global header settings 
@@ -211,8 +213,9 @@
         -->
         <alias source="/" destination="/status.xsl"/>
         <!-- The certificate file needs to contain both public and private part.
-             Both should be PEM encoded. -->
-        <ssl-certificate>/etc/icecast2/bundle.pem</ssl-certificate>
+             Both should be PEM encoded.
+        <ssl-certificate>/usr/share/icecast2/icecast.pem</ssl-certificate>
+        -->
     </paths>
 
     <logging>
